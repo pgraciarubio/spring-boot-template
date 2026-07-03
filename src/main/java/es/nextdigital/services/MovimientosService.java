@@ -1,5 +1,7 @@
 package es.nextdigital.services;
 
+import java.math.BigDecimal;
+
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
@@ -13,4 +15,6 @@ public interface MovimientosService {
             TipoMovimiento tipoMovimiento,
             Pageable pageable
     );
+
+    MovimientoDto retiradaEfectivo(Long idTarjeta, BigDecimal importe);
 }

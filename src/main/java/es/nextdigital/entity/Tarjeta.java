@@ -1,6 +1,8 @@
 package es.nextdigital.entity;
 
 
+import java.math.BigDecimal;
+
 import es.nextdigital.enums.TipoTarjeta;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -40,6 +42,9 @@ public class Tarjeta {
 	@Enumerated(EnumType.STRING)
 	private String pin;
 
+	@Column(name = "LIMITE_TARJETA")
+	private BigDecimal limiteTarjeta;
+    
 	public Long getIdTarjeta() {
 		return idTarjeta;
 	}
@@ -78,6 +83,14 @@ public class Tarjeta {
 
 	public void setPin(String pin) {
 		this.pin = pin;
+	}
+
+	public BigDecimal getLimiteTarjeta() {
+		return limiteTarjeta;
+	}
+
+	public void setLimiteTarjeta(BigDecimal limiteTarjeta) {
+		this.limiteTarjeta = limiteTarjeta;
 	}
     
 	

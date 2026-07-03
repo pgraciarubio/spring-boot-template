@@ -12,5 +12,5 @@ public interface MovimientoMapper {
     @Mapping(source = "cuenta.idCuenta", target = "idCuenta")
     MovimientoDto toDto(Movimiento movimiento);
 
+    
 }
-

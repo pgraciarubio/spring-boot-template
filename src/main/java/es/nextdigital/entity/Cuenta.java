@@ -1,5 +1,7 @@
 package es.nextdigital.entity;
 
+import java.math.BigDecimal;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -26,6 +28,8 @@ public class Cuenta {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ID_CLIENTE", nullable = false)
     private Cliente cliente;
+    
+    private BigDecimal importe;
 
 	public Long getIdCuenta() {
 		return idCuenta;
@@ -50,6 +54,16 @@ public class Cuenta {
 	public void setCliente(Cliente cliente) {
 		this.cliente = cliente;
 	}
+
+	public BigDecimal getImporte() {
+		return importe;
+	}
+
+	public void setImporte(BigDecimal importe) {
+		this.importe = importe;
+	}
+	
+	
     
     
     
